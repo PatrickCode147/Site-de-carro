@@ -22,7 +22,7 @@ header {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 600px;
-    gap: 100px;
+    gap: 50px;
     z-index: 2;
 
     & img {
@@ -32,7 +32,8 @@ header {
     & nav {
         & ul {
             display: grid;
-            grid-template-columns: repeat(3, 200px);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
         & a {
@@ -56,7 +57,7 @@ section {
     position: relative;
 
     & .list {
-        width: 70vw;
+        width: 90vw;
         height: 100%;
         margin: auto;
         position: relative;
@@ -91,7 +92,7 @@ section {
 
             & .content {
                 position: absolute;
-                right: 70px;
+                right: 50px;
                 width: 70%;
                 height: 105%;
                 display: flex;
@@ -105,7 +106,7 @@ section {
                 }
 
                 & h2 {
-                    font-size: 3em;
+                    font-size: 2.5em;
                     line-height: 1em;
                     font-family: "PT Serif", serif;
                 }
@@ -140,13 +141,10 @@ section {
             top: 50%;
             border-top: 1px solid #fff;
         }
-
     }
 
-
     .arrows {
-
-        width: 70vw;
+        width: 90vw;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -237,7 +235,6 @@ section {
             }
 
             & .content {
-
                 & .car-info,
                 h2,
                 .description,
@@ -274,7 +271,6 @@ section {
             }
 
             & .content {
-
                 & .car-info,
                 h2,
                 .description,
@@ -282,8 +278,81 @@ section {
                     transform: translateX(0);
                     opacity: 1;
                 }
-
             }
         }
+    }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    header {
+        width: 90vw;
+        gap: 20px;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    section .list {
+        width: 80vw;
+    }
+
+    section .list .item .content {
+        right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    header nav ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    section .list {
+        width: 90%;
+    }
+
+    section .list .item .content {
+        right: 20px;
+    }
+
+    .arrows {
+        width: 90%;
+    }
+
+    .indicators {
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        gap: 10px;
+    }
+
+    header img {
+        width: 80px;
+    }
+
+    section .list {
+        width: 95%;
+    }
+
+    section .list .item .content {
+        right: 10px;
+    }
+
+    .arrows {
+        width: 95%;
+    }
+
+    .indicators {
+        width: 98%;
     }
 }
